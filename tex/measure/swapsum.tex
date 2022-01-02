@@ -77,8 +77,8 @@ Without further ado:
 	Let $f_1, f_2, \dots \colon \Omega \to [0,+\infty]$
 	be a sequence of \emph{nonnegative} measurable functions.
 	Then $\liminf_n \colon \Omega \to [0,+\infty]$ is measurable and
-	\[ \int_\Omega \left( \liminf_{n \to \infty} f_n \right) \; d\mu
-		\le \liminf_{n \to \infty} \left( \int_\Omega f_n \; d\mu \right).  \]
+	\[ \int_{\Omega} \left( \liminf_{n \to \infty} f_n \right) \; d\mu
+		\le \liminf_{n \to \infty} \left( \int_{\Omega} f_n \; d\mu \right).  \]
 	Here we allow either side to be $+\infty$.
 \end{lemma}
 Notice that there are \emph{no extra hypothesis}
@@ -96,22 +96,22 @@ Here is the so-called ``monotone convergence theorem''.
 	measurable functions such that $\lim_n f_n = f$
 	and $f_n(\omega) \le f(\omega)$ for each $n$.
 	Then $f$ is measurable and
-	\[ \lim_{n \to \infty} \left( \int_\Omega f_n \; d\mu \right)
-		= \int_\Omega f \; d\mu. \]
+	\[ \lim_{n \to \infty} \left( \int_{\Omega} f_n \; d\mu \right)
+		= \int_{\Omega} f \; d\mu. \]
 	Here we allow either side to be $+\infty$.
 \end{corollary}
 \begin{proof}
 	We have
 	\begin{align*}
-		\int_\Omega f \; d\mu
-		&= \int_\Omega \left( \liminf_{n \to \infty} f_n \right) \; d\mu \\
-		&\le \liminf_{n \to \infty} \int_\Omega f_n \; d\mu \\
-		&\le \limsup_{n \to \infty} \int_\Omega f_n \; d\mu \\
-		&\le \int_\Omega f \; d\mu
+		\int_{\Omega} f \; d\mu
+		&= \int_{\Omega} \left( \liminf_{n \to \infty} f_n \right) \; d\mu \\
+		&\le \liminf_{n \to \infty} \int_{\Omega} f_n \; d\mu \\
+		&\le \limsup_{n \to \infty} \int_{\Omega} f_n \; d\mu \\
+		&\le \int_{\Omega} f \; d\mu
 	\end{align*}
 	where the first $\le$ is by Fatou lemma,
 	and the second by the fact that
-	$\int_\Omega f_n \le \int_\Omega f$ for every $n$.
+	$\int_{\Omega} f_n \le \int_{\Omega} f$ for every $n$.
 	This implies all the inequalities are equalities and we are done.
 \end{proof}
 \begin{remark}
@@ -147,10 +147,10 @@ The most famous result, though is the following.
 	$|f_n(\omega)| \le |g(\omega)|$ for all $\omega \in \Omega$.
 	Then the inequality
 	\begin{align*}
-		\int_\Omega \left( \liminf_{n \to \infty} f_n \right) \; d\mu
-		&\le \liminf_{n \to \infty} \left( \int_\Omega f_n \; d\mu \right) \\
-		&\le \limsup_{n \to \infty} \left( \int_\Omega f_n \; d\mu \right)
-		\le \int_\Omega \left( \limsup_{n \to \infty} f_n \right) \; d\mu.
+		\int_{\Omega} \left( \liminf_{n \to \infty} f_n \right) \; d\mu
+		&\le \liminf_{n \to \infty} \left( \int_{\Omega} f_n \; d\mu \right) \\
+		&\le \limsup_{n \to \infty} \left( \int_{\Omega} f_n \; d\mu \right)
+		\le \int_{\Omega} \left( \limsup_{n \to \infty} f_n \right) \; d\mu.
 	\end{align*}
 \end{corollary}
 \begin{proof}
@@ -177,8 +177,8 @@ The most famous result, though is the following.
 	\emph{absolutely integrable} function for which
 	$|f_n(\omega)| \le |g(\omega)|$ for all $\omega \in \Omega$.
 	Then
-	\[ \int_\Omega f \; d \mu
-		= \lim_{n \to \infty} \left( \int_\Omega f_n \; d\mu \right). \]
+	\[ \int_{\Omega} f \; d \mu
+		= \lim_{n \to \infty} \left( \int_{\Omega} f_n \; d\mu \right). \]
 \end{corollary}
 \begin{proof}
 	If $f(\omega) = \lim_{n \to \infty} f_n(\omega)$,
